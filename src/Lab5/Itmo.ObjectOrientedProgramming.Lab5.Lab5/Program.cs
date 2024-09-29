@@ -11,7 +11,7 @@ public static class Program
     public static void Main()
     {
         var collection = new ServiceCollection();
-        var configuration = new Configuration("Server=localhost;Port=5432;Database=postgres;Username=postgres;Password=05052004;");
+        var configuration = new Configuration("Server=;Port=;Database=;Username=;Password=;");
         collection
             .AddApplication()
             .AddInfrastructureDataAccess(configuration.ConnectionString);
