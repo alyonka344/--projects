@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Views\Shared\Error.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Shared\_Layout.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Shared\_ValidationScriptsPartial.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Itmo.ObjectOrientedProgramming.Lab5.Application.Services\Itmo.ObjectOrientedProgramming.Lab5.Application.Services.csproj" />
+      <ProjectReference Include="..\Itmo.ObjectOrientedProgramming.Lab5.Application\Itmo.ObjectOrientedProgramming.Lab5.Application.csproj" />
+      <ProjectReference Include="..\Itmo.ObjectOrientedProgramming.Lab5.Infrastructure.DataAccess\Itmo.ObjectOrientedProgramming.Lab5.Infrastructure.DataAccess.csproj" />
+    </ItemGroup>
+
+
+</Project>

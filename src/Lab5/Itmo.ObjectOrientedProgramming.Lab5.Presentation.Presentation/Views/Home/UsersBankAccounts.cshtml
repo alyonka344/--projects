@@ -1,0 +1,77 @@
+﻿@model Itmo.ObjectOrientedProgramming.Lab5.Presentation.Presentation.Models.UserPageModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Accounts</title>
+</head>
+<body>
+
+<div>
+    <tr>
+        <td>
+            <p>Username: @Model.Username</p>
+            <p>Role: client</p></td>
+        <td>
+            <form action="/Home/AddAccount">
+                <input
+                    type="submit"
+                    value="Add Account"/>
+            </form></td></tr>
+    @foreach (var acc in Model.BankAccounts)
+    {
+        <tr>
+            <td>
+                <p style="border:3px #00B344  solid;">
+                <p>Account Number: @acc.AccountNumber</p>
+                <p>Balance: @acc.MoneyAmount</p>
+            </td>
+            <form action="/Home/UsersBankAccounts">
+                <td>
+                    <input
+                        name="moneyAmount"
+                        type="number"
+                        min="0"/></td>
+                <td>
+                    <input
+                        name="button"
+                        type="submit"
+                        value="Withdraw money"/></td>
+                <td>
+                    <input
+                        name="button"
+                        type="submit"
+                        value="Add money"/></td>
+                <td>
+                    <input
+                        name="button"
+                        type="submit"
+                        value="Transaction History"/></td>
+                <td>
+                    <input
+                        name="accountNumber"
+                        type="hidden"
+                        value="@acc.AccountNumber"/></td>
+                <p>
+                    <td>
+                        <input
+                            name="recipientAccountNumber"
+                            type="number"
+                            min="0"/></td>
+                    <td>
+                        <input
+                            name="button"
+                            type="submit"
+                            value="Transfer money"/></td>
+                </p>
+            </form>
+        </tr>
+    }
+</div>
+</body>
+</html>

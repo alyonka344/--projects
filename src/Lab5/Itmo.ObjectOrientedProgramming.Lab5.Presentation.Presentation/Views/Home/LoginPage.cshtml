@@ -1,0 +1,41 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Login Page</title>
+</head>
+<body>
+<div>
+    <form method="post" action="~/Home/LoginPage">
+        <table>
+            <tr><td><p>Enter your Username </p></td><td>
+                <input type="text"
+                       required
+                       name="username"
+                       minlength="3"
+                       size="10"/>
+            </td></tr>
+            <tr><td><p>Enter your Password :</p></td><td>
+                <input value="password"
+                       type="number"
+                       name="password"
+                       required
+                       min="100"
+                       max="100000000"
+                       size="10"/>
+            </td></tr>
+            <tr><td><input type="submit"  
+                           name="button"
+                           value="Log In" /> </td><td></td></tr>
+            <tr><td><input type="submit"  
+                           name="button"
+                           value="Sign Up" /> </td><td></td></tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

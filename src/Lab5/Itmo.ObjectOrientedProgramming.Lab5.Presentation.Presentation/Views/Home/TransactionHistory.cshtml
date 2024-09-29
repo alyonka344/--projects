@@ -1,0 +1,30 @@
+﻿@model System.Collections.Generic.IEnumerable<Itmo.ObjectOrientedProgramming.Lab5.Application.Models.BankOperations.BankOperation>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>transaction history</title>
+</head>
+<body>
+<div>
+       @foreach (var acc in Model)
+       {
+           <tr>
+               <td>
+                   <p style="border:3px #FFA200  solid;">
+                   <p>Number: @acc.Number</p>
+                   <p>Account Number: @acc.AccountNumber</p>
+                   <p>Money Amount: @acc.MoneyAmount</p>
+                   <p>Operation Type: @acc.OperationType</p>
+                   <p>Operation Result: @acc.OperationResult</p>
+               </td>
+           </tr>
+       }
+</div>
+</body>
+</html>

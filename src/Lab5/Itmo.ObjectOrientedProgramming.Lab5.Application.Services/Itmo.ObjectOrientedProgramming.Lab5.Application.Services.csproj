@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+
+    <ItemGroup>
+      <ProjectReference Include="..\Itmo.ObjectOrientedProgramming.Lab5.Application.Models\Itmo.ObjectOrientedProgramming.Lab5.Application.Models.csproj" />
+    </ItemGroup>
+
+
+    <ItemGroup>
+      <Reference Include="Itmo.ObjectOrientedProgramming.Lab5.Application">
+        <HintPath>..\Itmo.ObjectOrientedProgramming.Lab5.Lab5\bin\Debug\net7.0\Itmo.ObjectOrientedProgramming.Lab5.Application.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+
+
+</Project>
